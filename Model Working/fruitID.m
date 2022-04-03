@@ -1,4 +1,3 @@
-
 %% Load image data and extract features
 
 % Load dataset
@@ -28,4 +27,5 @@ imagefeatures = double(encode(bag,img));
 % Step 3: Make prediction
 tb = array2table(imagefeatures);
 y = trainedModel.predictFcn(tb);
+disp("This fruit is a:");
 disp(y);
