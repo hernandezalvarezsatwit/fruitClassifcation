@@ -20,7 +20,7 @@ fruitData.type = getLabels(dataSet);
 %Use the new features to train a model and assess its performance
 %Once the classification learner opens click ok:
 % New Session> Select Input > fruitData > Start Session > Click on the
-% Machine Learning Models > Cubic SVM > Train > Once it is
+% Machine Learning Models > Select Medium Gaussian > Train > Once it is
 % done training > Export > name = trainedModel > Run next section
 classificationLearner
 
@@ -30,11 +30,7 @@ classificationLearner
 %Display success rate on test observations
 %[results, successRate] = testModel(trainedModel, bag, 2, 248); 
 %disp(successRate);
-
-% plug in path to image to test
-testM(trainedModel, bag, "orangeFromTrain.png")
-testM(trainedModel, bag, "bananaFromTrain.png")
-testM(trainedModel, bag, "appleFromTrain.png")
+test(trainedModel, bag, "b.jpg")
 
 
 %% Function runs over the test data and returns the success rate as
@@ -71,7 +67,7 @@ end
 %Not working well hopfully because test data has totally different
 %background than train data. Should work better if both have no 
 %background
-function testM(trainedModel, bag, path)
+function y = test(trainedModel, bag, path)
     img = imread(path);   
     imagefeatures = double(encode(bag,img));
     tb = array2table(imagefeatures);
