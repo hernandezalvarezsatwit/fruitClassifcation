@@ -1,7 +1,7 @@
 %% Load image data and extract features
 
 % Load dataset
-imset = imageSet('hugeTrainSet','recursive');  % Change to trainingImages
+imset = imageSet('trainingImages','recursive');  % Change to trainingImages
 
 % Extract features
 bag = bagOfFeatures(imset,'VocabularySize',500, 'PointSelection','Detector');
