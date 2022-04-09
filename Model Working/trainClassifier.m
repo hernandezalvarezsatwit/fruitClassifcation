@@ -1,3 +1,6 @@
+%TODO: THIS MODEL WAS EXPORTED FROM THE classificationLearner AS A FUNCTION
+%IF NEED TO BE, REPLACE IT WITH A BETTER MODEL BUT KEEP SAME FUNCTION
+%NAME
 function [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
 % [trainedClassifier, validationAccuracy] = trainClassifier(trainingData)
 % Returns a trained classifier and its accuracy. This code recreates the

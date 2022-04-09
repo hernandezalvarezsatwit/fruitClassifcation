@@ -16,9 +16,7 @@ function [trainedModel, bag] = trainModel()
     fruitData = array2table(imagefeatures);
     fruitData.type = getLabels(imset);
     
-    % Train the model using the data set. 
-    % TODO: CONSDIER ADJUSTING THE MACHINE LEARNING TECHNIQUE USED
-    % ONCE WE CAN COMPARE PEFORMANCES WITH PROCESSED TRAINING IMAGES
+    % Train the model 
     trainedModel = trainClassifier(fruitData);
     
     clc; 
